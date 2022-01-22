@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ksiegarnia</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login-style.css">
     <script type="text/javascript" src="main.js"></script>
 
     <!-- fonts -->
@@ -28,5 +29,27 @@
         <button class="openbtn" onclick="checkIfNavIsOpened()">&#9776; Menu</button>
         <h1 id="logo">Ksiegarnia</h1>
     </div>
+
+    <div id="login">
+        <form action="login.php" method="POST">
+            <p>
+                Login: <br />
+                <input type="text" name="login" />
+            </p>
+            <p>
+                Haslo: <br />
+                <input type="password" name="password" />
+            </p>
+            <p>
+                <input type="submit" name="submitButton" value="Zaloguj sie" />
+            </p>
+        </form>
+    </div>
 </body>
 </html>
+
+<?php 
+
+
+
+?>

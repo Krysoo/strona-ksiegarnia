@@ -77,21 +77,29 @@ body {
   }
 
 /* background */
-@keyframes changeBg
+/* @keyframes changeBg
 {
    0%   {background-image: url("imgtest/1.jpg");}
    25%  {background-image: url("imgtest/2.jpg");}
    50%  {background-image: url("imgtest/3.jpg");}
    100% {background-image: url("imgtest/4.jpg");}
-}
+} */
  
 body
 {
    background: linear-gradient(
     rgba(0, 0, 0, 0.7), 
     rgba(0, 0, 0, 0.7)
-   );
-   animation-name: changeBg;
+   ), url("imgtest/1.jpg"); 
+   /* animation-name: changeBg;
    animation-duration: 20s;
-   animation-iteration-count: infinite;
+   animation-iteration-count: infinite;  */
+}
+
+#header {
+  padding-top: 0.6%;
+  margin-top: 0;
+  height: 7%;
+  backdrop-filter: blur(7px);
+  border-bottom: 1px solid white;
 }
