@@ -30,27 +30,49 @@
     </div>
 
     <div id="login">
-        <form action="admin.php" method="POST">
-            <p>
-                Login: <br />
-                <input type="text" name="login" />
-            </p>
-            <p>
-                Haslo: <br />
-                <input type="password" name="password" />
-            </p>
-            <p>
-                <input type="submit" name="submitButton" id="submitButton" value="Zaloguj sie" />
-            </p>
+    
+    <?php 
+        
+        $login = $_POST['login'];
+        $pass = $_POST['password'];
+
+        $connect = mysqli_connect("localhost", "root", "", "ksiegarnia");
+
+        if ($login != "root" && $pass != 123) {
+            header('Location: login.php');
+        }
+        
+        if ($login == "root" && $pass == 123) {
+            echo "<p>Witaj " . $login . "! </p>";
+            echo "<p><button onclick='handleClick()' style='margin-left: 1rem;'> Dodaj ksiazke! </button></a></p>";
+        }
+
+        mysqli_close($connect);
+    
+  ?>
+</div>
+    <div style="display: none;" id="hidden">
+        <form action="action.php">
+
+            Nazwa ksiazki: <input type="text" name="nazwa" />
+            Miejsce wydania: <input type="text" name="miejsce" />
+            Rok wydania: <input type="text" name="rok" />
+            Wydawnictwo: <input type="text" name="wydawnictwo" />
+            Temat: <input type="text" name="temat" />
+            Opis: <input type="text" name="opis" />
+            <button>Cofnij</button>
+            <button>Dodaj</button>
+            
         </form>
+
+        <?php 
+        
+
+
+        ?>
+    </div>
 
         </div>
     </div>
 </body>
 </html>
-
-<?php 
-
-
-
-?>

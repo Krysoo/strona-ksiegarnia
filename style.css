@@ -103,3 +103,24 @@ body
   backdrop-filter: blur(7px);
   border-bottom: 1px solid white;
 }
+
+#query {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3rem;
+  margin-top: 5vh;
+}
+
+#results {
+  text-align: center;
+  font-size: large;
+  margin-left: 3rem;
+}
+
+#login, #panel {
+  justify-content: center;
+  display: flex;
+  margin-left: 3rem;
+  text-align: center;
+}

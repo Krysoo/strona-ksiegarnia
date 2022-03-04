@@ -18,15 +18,22 @@
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="checkIfNavIsOpened()">&times;</a>
         <a href="login.php">Zaloguj sie</a>
-        <a href="index.html">Strona glowna</a>
+        <a href="index.php">Strona glowna</a>
         <a href="#">Kontakt</a>
         <a href="#">O nas</a>
         <!-- <a href="#"></a> maybe something later -->
     </div>
 
     <div id="header">
-        <button class="openbtn" onclick="checkIfNavIsOpened()">&#9776; Menu</button>
+        <button class="openbtn" onclick="checkIfNavIsOpened()">&#9776;</button>
         <h1 id="logo">Ksiegarnia</h1>
+    </div>
+
+    <div id="query">
+        <form action="query.php" method="POST">
+            <input type="text" name="query" />
+            <button id="queryButton">Wyślij</button>
+        </form>
     </div>
 </body>
 </html>

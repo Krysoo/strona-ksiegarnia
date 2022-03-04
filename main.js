@@ -18,6 +18,11 @@ function openNav() {
     isOpened = false;
   }
 
+function handleClick() {
+  document.getElementById("hidden").style.display =  "block";
+  document.getElementById("panel").style.display = "none";
+}
+
 // - sidebar
 
 // - background

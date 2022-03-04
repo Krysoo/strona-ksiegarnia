@@ -29,28 +29,27 @@
         <h1 id="logo">Ksiegarnia</h1>
     </div>
 
-    <div id="login">
-        <form action="admin.php" method="POST">
-            <p>
-                Login: <br />
-                <input type="text" name="login" />
-            </p>
-            <p>
-                Haslo: <br />
-                <input type="password" name="password" />
-            </p>
-            <p>
-                <input type="submit" name="submitButton" id="submitButton" value="Zaloguj sie" />
-            </p>
-        </form>
+    <div id="results">
+        <?php 
+        
+            $post = $_POST['query'];
 
-        </div>
+            $connect = mysqli_connect("localhost", "root", "", "ksiegarnia");
+        
+            $query = mysqli_query($connect, "SELECT * FROM ksiazki WHERE tytul LIKE 'Pan Tadeusz'" );
+
+            while ($a = mysqli_fetch_array($query)) {
+                echo "<p>Tytul: " . $a['tytul'] ."</p> <br />";
+                echo "<p>Miejsce wydania: " . $a['miejsce_wydania'] . "</p> <br />";
+                echo "<p>Rok wydania: " . $a['rok_wydania'] . " </p> <br />";
+                echo "<p>Wydawnictwo: " . $a['wydawnictwo'] . " </p> <br />";
+                echo "<p>Temat: " . $a['temat'] . " </p> <br />";
+                echo "<p>Opis: " . $a['opis'] . " </p> <br />";
+            }
+
+            mysqli_close($connect);
+
+        ?>
     </div>
 </body>
 </html>
-
-<?php 
-
-
-
-?>
