@@ -23,6 +23,10 @@ function handleClick() {
   document.getElementById("panel").style.display = "none";
 }
 
+function hideMenu() {
+  document.getElementById("hidden").style.display = "none";
+}
+
 // - sidebar
 
 // - background

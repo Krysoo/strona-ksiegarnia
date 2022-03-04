@@ -36,7 +36,7 @@
 
             $connect = mysqli_connect("localhost", "root", "", "ksiegarnia");
         
-            $query = mysqli_query($connect, "SELECT * FROM ksiazki WHERE tytul LIKE 'Pan Tadeusz'" );
+            $query = mysqli_query($connect, "SELECT * FROM ksiazki WHERE tytul LIKE '".$post. "'" );
 
             while ($a = mysqli_fetch_array($query)) {
                 echo "<p>Tytul: " . $a['tytul'] ."</p> <br />";

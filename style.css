@@ -90,7 +90,7 @@ body
    background: linear-gradient(
     rgba(0, 0, 0, 0.7), 
     rgba(0, 0, 0, 0.7)
-   ), url("imgtest/1.jpg"); 
+   ), url("imgtest/1.jpg"), no-repeat; 
    /* animation-name: changeBg;
    animation-duration: 20s;
    animation-iteration-count: infinite;  */
@@ -108,7 +108,7 @@ body
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 3rem;
+  margin-left: 4rem;
   margin-top: 5vh;
 }
 
@@ -123,4 +123,9 @@ body
   display: flex;
   margin-left: 3rem;
   text-align: center;
+}
+
+#hidden {
+  text-align: center;
+  margin-left: 3rem;
 }

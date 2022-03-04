@@ -36,9 +36,7 @@
         $login = $_POST['login'];
         $pass = $_POST['password'];
 
-        $connect = mysqli_connect("localhost", "root", "", "ksiegarnia");
-
-        if ($login != "root" && $pass != 123) {
+        if ($login != "root" || $pass != 123) {
             header('Location: login.php');
         }
         
@@ -47,32 +45,23 @@
             echo "<p><button onclick='handleClick()' style='margin-left: 1rem;'> Dodaj ksiazke! </button></a></p>";
         }
 
-        mysqli_close($connect);
-    
   ?>
-</div>
+    </div>
     <div style="display: none;" id="hidden">
-        <form action="action.php">
+        <form action="add.php" method="POST">
 
-            Nazwa ksiazki: <input type="text" name="nazwa" />
-            Miejsce wydania: <input type="text" name="miejsce" />
-            Rok wydania: <input type="text" name="rok" />
-            Wydawnictwo: <input type="text" name="wydawnictwo" />
-            Temat: <input type="text" name="temat" />
-            Opis: <input type="text" name="opis" />
-            <button>Cofnij</button>
-            <button>Dodaj</button>
+            Nazwa ksiazki: <input type="text" name="nazwa" /> <br />
+            Miejsce wydania: <input type="text" name="miejsce" /> <br />
+            Rok wydania: <input type="text" name="rok" /> <br />
+            Wydawnictwo: <input type="text" name="wydawnictwo" /> <br />
+            Temat: <input type="text" name="temat" /> <br />
+            Opis: <input type="text" name="opis" /> <br />
+            Potwierdz login: <input type="text" name="login" /> <br />
+            Potwierdz haslo: <input type="password" name="password" /> <br />
+            <button onclick="hideMenu()">Dodaj</button>
             
         </form>
 
-        <?php 
-        
-
-
-        ?>
-    </div>
-
-        </div>
     </div>
 </body>
 </html>

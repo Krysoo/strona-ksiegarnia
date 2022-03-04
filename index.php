@@ -31,8 +31,8 @@
 
     <div id="query">
         <form action="query.php" method="POST">
-            <input type="text" name="query" />
-            <button id="queryButton">Wyślij</button>
+            <input style="height: 2rem;" type="text" name="query" />
+            <button style="height: 2rem;" id="queryButton">Wyszukaj</button>
         </form>
     </div>
 </body>
